@@ -768,3 +768,13 @@ $settings['entity_update_batch_size'] = 50;
 # if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
+$databases['default']['default'] = array (
+  'database' => '$_SERVER["_DRUPAL_WEB_DATABASE_NAME"]',
+  'username' => '$_SERVER["_DRUPAL_WEB_DATABASE_USERNAME"]',
+  'password' => '$_SERVER["_DRUPAL_WEB_DATABASE_PASSWORD"]',
+  'prefix' => '',
+  'host' => '$_SERVER["_DRUPAL_WEB_DATABASE_HOST"]',
+  'port' => '3306',
+  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+  'driver' => 'mysql',
+);
